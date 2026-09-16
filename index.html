@@ -28,7 +28,7 @@
     </section>
 
     <section class="progress-panel" aria-label="Study progress">
-      <div class="progress-heading"><span>Your progress</span><strong id="progressText">0 / 8 topics</strong></div>
+      <div class="progress-heading"><span>Your progress</span><strong id="progressText">0 / 20 topics</strong></div>
       <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-foot"><span id="progressMessage">No pressure. One topic is enough for today.</span><span id="quizScore"></span></div>
     </section>
@@ -40,16 +40,18 @@
     </nav>
 
     <section class="view is-visible" id="learnView" aria-labelledby="learnTitle">
-      <div class="section-intro"><div><div class="eyebrow">The map</div><h2 id="learnTitle">Nine ideas that hold the course together</h2></div><p>Read the bold line first. The detail is there when your brain is ready for it.</p></div>
+      <div class="section-intro"><div><div class="eyebrow">The map</div><h2 id="learnTitle">Twenty ideas that hold the course together</h2></div><p>Start with the core. Open the detail. Then explain the trap aloud.</p></div>
       <div class="topic-grid" id="topicGrid"></div>
       <aside class="memory-note"><span class="note-icon">!</span><div><strong>The one-sentence model</strong><p>A pipeline runs jobs; an agent executes a job; a pool decides which agents can be shared; the network and permissions decide whether the work is allowed to happen.</p></div></aside>
+      <section class="study-plan" aria-labelledby="studyPlanTitle"><div class="eyebrow">A route that works</div><h2 id="studyPlanTitle">Your 4-pass study plan</h2><div class="plan-grid"><div><b>1. Map</b><span>Read the twenty cores once. Do not try to memorise yet.</span></div><div><b>2. Explain</b><span>Cover the cards and say the answer out loud before flipping.</span></div><div><b>3. Decide</b><span>Do the scenario quiz. Read every explanation, including correct ones.</span></div><div><b>4. Return</b><span>Repeat tomorrow, starting with anything you marked for review.</span></div></div></section>
+      <section class="release-lens" aria-labelledby="releaseLensTitle"><div class="eyebrow">Your working context</div><h2 id="releaseLensTitle">The release-engineering lens</h2><p>This module teaches the machinery. Your job is to use that machinery to move a safe, traceable package of microservices from commit to customer.</p><div class="release-flow"><span>Commit</span><i>→</i><span>Build & test</span><i>→</i><span>Versioned artifacts</span><i>→</i><span>Environments</span><i>→</i><span>Observe & release</span></div><div class="lens-grid"><div><b>Continuous delivery</b><span>Every change is built, tested, and kept deployable. A human or policy may still approve production.</span></div><div><b>Continuous deployment</b><span>Every change that passes the automated safeguards is deployed automatically. This needs strong tests, monitoring, rollback, and small changes.</span></div><div><b>For your platform</b><span>Decide whether services version and deploy independently or travel as a tested release train. Make the dependency contract explicit.</span></div></div></section>
     </section>
 
     <section class="view" id="cardsView" aria-labelledby="cardsTitle">
-      <div class="section-intro"><div><div class="eyebrow">Active recall</div><h2 id="cardsTitle">Can you say it before you see it?</h2></div><p>Tap a card to reveal the answer. Mark it known only after you retrieve it.</p></div>
-      <div class="card-controls"><span id="cardCount">Card 1 of 12</span><button class="small-button" id="shuffleButton" type="button">Shuffle</button></div>
-      <article class="flashcard" id="flashcard" tabindex="0" aria-live="polite"><div class="card-face card-front"><span class="card-label">Question</span><h3 id="cardQuestion"></h3><span class="tap-hint">Tap to reveal</span></div><div class="card-face card-back"><span class="card-label">Answer</span><p id="cardAnswer"></p><span class="tap-hint">Tap to flip back</span></div></article>
-      <div class="card-actions"><button class="secondary-button" id="againButton" type="button">Again</button><button class="primary-button" id="knownButton" type="button">I knew it <span aria-hidden="true">&#10003;</span></button></div>
+      <div class="section-intro"><div><div class="eyebrow">Active recall</div><h2 id="cardsTitle">Build the answer, then check it</h2></div><p>Try to explain the idea aloud. Use a hint only if you are genuinely stuck, then reveal the answer.</p></div>
+      <div class="card-controls"><span id="cardCount">Card 1 of 43</span><span id="reviewQueueLabel"></span><button class="small-button" id="shuffleButton" type="button">Shuffle</button></div>
+      <article class="flashcard" id="flashcard" tabindex="0" aria-live="polite"><div class="card-face card-front"><span class="card-label" id="cardType">Explain</span><h3 id="cardQuestion"></h3><div class="hint-box" id="hintBox" hidden></div><button class="hint-button" id="hintButton" type="button">Give me a hint</button><span class="tap-hint">Tap the card to reveal the full answer</span></div><div class="card-face card-back"><span class="card-label">Strong answer</span><p id="cardAnswer"></p><div class="context-box"><strong>Why this matters</strong><span id="cardContext"></span></div><span class="tap-hint">Tap to flip back</span></div></article>
+      <div class="card-actions"><button class="secondary-button" id="againButton" type="button">Review again</button><button class="primary-button" id="knownButton" type="button">I can explain it <span aria-hidden="true">&#10003;</span></button></div>
     </section>
 
     <section class="view" id="quizView" aria-labelledby="quizTitle">
