@@ -110,6 +110,7 @@ h1 em { color:var(--green); font-style:normal; }
 .mock-brief strong,.mock-brief span { display:block; }
 .mock-brief strong { font-family:'Space Grotesk',sans-serif; font-size:17px; }
 .mock-brief span { color:var(--muted); font-size:12px; margin-top:4px; }
+.mock-loaded-status { color:var(--green); font-size:13px; font-weight:700; margin:0 0 16px; }
 .mock-card { background:var(--white); border:1px solid var(--line); border-radius:6px; padding:22px; margin-bottom:12px; }
 .mock-question-heading { display:flex; gap:14px; align-items:flex-start; }
 .mock-question-heading > span { display:grid; place-items:center; flex:0 0 27px; height:27px; border-radius:50%; background:var(--green); color:var(--white); font-size:12px; font-weight:700; }
