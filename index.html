@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A short, active-recall study guide for the Microsoft Learn module Manage Azure Pipeline agents and pools.">
+  <title>Pipeline Agents | Study deck</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Pipeline Agents study deck home"><span class="brand-mark">PA</span><span>Pipeline Agents</span></a>
+    <div class="top-actions">
+      <span class="streak" id="streakLabel">0 days</span>
+      <button class="text-button" id="resetButton" type="button">Reset progress</button>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero" aria-labelledby="pageTitle">
+      <div class="eyebrow">Azure Pipelines / focused revision</div>
+      <h1 id="pageTitle">Understand the machine<br><em>behind the pipeline.</em></h1>
+      <p class="hero-copy">A small study deck for <strong>Manage Azure Pipeline agents and pools</strong>. Learn one idea, retrieve it from memory, then test the decision.</p>
+      <div class="hero-actions">
+        <button class="primary-button" id="startButton" type="button">Start a 10-minute session <span aria-hidden="true">&#8594;</span></button>
+        <a class="quiet-link" href="https://learn.microsoft.com/en-us/training/modules/manage-azure-pipeline-agents-pools/" target="_blank" rel="noreferrer">Open the Microsoft module</a>
+      </div>
+    </section>
+
+    <section class="progress-panel" aria-label="Study progress">
+      <div class="progress-heading"><span>Your progress</span><strong id="progressText">0 / 8 topics</strong></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-foot"><span id="progressMessage">No pressure. One topic is enough for today.</span><span id="quizScore"></span></div>
+    </section>
+
+    <nav class="tabs" aria-label="Study modes">
+      <button class="tab is-active" data-view="learn" type="button">Learn</button>
+      <button class="tab" data-view="cards" type="button">Recall cards</button>
+      <button class="tab" data-view="quiz" type="button">Quick check</button>
+    </nav>
+
+    <section class="view is-visible" id="learnView" aria-labelledby="learnTitle">
+      <div class="section-intro"><div><div class="eyebrow">The map</div><h2 id="learnTitle">Nine ideas that hold the course together</h2></div><p>Read the bold line first. The detail is there when your brain is ready for it.</p></div>
+      <div class="topic-grid" id="topicGrid"></div>
+      <aside class="memory-note"><span class="note-icon">!</span><div><strong>The one-sentence model</strong><p>A pipeline runs jobs; an agent executes a job; a pool decides which agents can be shared; the network and permissions decide whether the work is allowed to happen.</p></div></aside>
+    </section>
+
+    <section class="view" id="cardsView" aria-labelledby="cardsTitle">
+      <div class="section-intro"><div><div class="eyebrow">Active recall</div><h2 id="cardsTitle">Can you say it before you see it?</h2></div><p>Tap a card to reveal the answer. Mark it known only after you retrieve it.</p></div>
+      <div class="card-controls"><span id="cardCount">Card 1 of 12</span><button class="small-button" id="shuffleButton" type="button">Shuffle</button></div>
+      <article class="flashcard" id="flashcard" tabindex="0" aria-live="polite"><div class="card-face card-front"><span class="card-label">Question</span><h3 id="cardQuestion"></h3><span class="tap-hint">Tap to reveal</span></div><div class="card-face card-back"><span class="card-label">Answer</span><p id="cardAnswer"></p><span class="tap-hint">Tap to flip back</span></div></article>
+      <div class="card-actions"><button class="secondary-button" id="againButton" type="button">Again</button><button class="primary-button" id="knownButton" type="button">I knew it <span aria-hidden="true">&#10003;</span></button></div>
+    </section>
+
+    <section class="view" id="quizView" aria-labelledby="quizTitle">
+      <div class="section-intro"><div><div class="eyebrow">Decision practice</div><h2 id="quizTitle">Make the call</h2></div><p>These are the distinctions worth being able to explain without notes.</p></div>
+      <div id="quizArea"></div>
+    </section>
+
+    <footer class="footer"><span>Built for small sessions and imperfect attention.</span><a href="https://learn.microsoft.com/en-us/training/modules/manage-azure-pipeline-agents-pools/" target="_blank" rel="noreferrer">Source: Microsoft Learn</a></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
