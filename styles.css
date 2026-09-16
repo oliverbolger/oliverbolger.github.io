@@ -105,9 +105,35 @@ h1 em { color:var(--green); font-style:normal; }
 .explanation.is-wrong { color:#a24e32; }
 .quiz-result { padding:24px; background:var(--mint); border-radius:6px; margin-bottom:18px; }
 .quiz-result h3 { font-size:27px; }
+.mock-brief { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:22px; }
+.mock-brief div { padding:17px; background:var(--white); border:1px solid var(--line); border-top:3px solid var(--orange); }
+.mock-brief strong,.mock-brief span { display:block; }
+.mock-brief strong { font-family:'Space Grotesk',sans-serif; font-size:17px; }
+.mock-brief span { color:var(--muted); font-size:12px; margin-top:4px; }
+.mock-card { background:var(--white); border:1px solid var(--line); border-radius:6px; padding:22px; margin-bottom:12px; }
+.mock-question-heading { display:flex; gap:14px; align-items:flex-start; }
+.mock-question-heading > span { display:grid; place-items:center; flex:0 0 27px; height:27px; border-radius:50%; background:var(--green); color:var(--white); font-size:12px; font-weight:700; }
+.mock-question-heading h3 { font-size:18px; line-height:1.25; margin-top:3px; }
+.mock-area { display:block; color:var(--orange); font-size:10px; font-weight:700; letter-spacing:1.1px; text-transform:uppercase; margin-bottom:5px; }
+.mock-options { display:grid; gap:8px; margin:17px 0 0 41px; }
+.mock-option { padding:12px 14px; text-align:left; border:1px solid var(--line); border-radius:4px; background:var(--paper); color:var(--ink); }
+.mock-option:hover { border-color:var(--green); }
+.mock-option.selected { border:2px solid var(--green); padding:11px 13px; background:var(--mint); }
+.mock-option.correct { background:#dcefe0; border-color:#6da57b; }
+.mock-option.wrong { background:#fae2d9; border-color:var(--orange); }
+.mock-explanation { color:var(--green); font-size:13px; line-height:1.5; margin:15px 0 0 41px; }
+.mock-explanation.is-wrong { color:#a24e32; }
+.mock-result { padding:25px; border-radius:6px; margin-bottom:18px; }
+.mock-result.passed { background:var(--mint); }
+.mock-result.needs-review { background:#fae2d9; }
+.mock-result-kicker { color:var(--orange); font-size:11px; font-weight:700; letter-spacing:1.7px; }
+.mock-result h3 { font-size:32px; margin:8px 0; }
+.mock-result p { margin:0; }
+.mock-warning { padding:12px 15px; color:#965238; background:#fae2d9; border-left:3px solid var(--orange); font-size:13px; }
+.mock-actions { display:flex; gap:12px; margin-top:22px; }
 .footer { border-top:1px solid var(--line); margin-top:70px; padding-top:20px; display:flex; justify-content:space-between; color:var(--muted); font-size:12px; }
 .footer a { color:var(--green); }
 @keyframes rise { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
 @keyframes fade { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:none; } }
-@media (max-width:700px) { .topbar { height:62px; } .brand { font-size:14px; } .text-button { display:none; } .shell { padding:47px 18px 30px; } .hero { padding-bottom:42px; } h1 { font-size:47px; } .hero-copy { font-size:16px; } .section-intro { display:block; } .section-intro p { margin-top:13px; } .topic-grid { grid-template-columns:1fr; } .topic { min-height:0; } .plan-grid,.lens-grid { grid-template-columns:repeat(2,1fr); } .release-lens { padding:23px; } .progress-foot { display:block; } .progress-foot span { display:block; margin-top:4px; } .footer { display:block; } .footer a { display:block; margin-top:8px; } }
+@media (max-width:700px) { .topbar { height:62px; } .brand { font-size:14px; } .text-button { display:none; } .shell { padding:47px 18px 30px; } .hero { padding-bottom:42px; } h1 { font-size:47px; } .hero-copy { font-size:16px; } .section-intro { display:block; } .section-intro p { margin-top:13px; } .topic-grid { grid-template-columns:1fr; } .topic { min-height:0; } .plan-grid,.lens-grid,.mock-brief { grid-template-columns:repeat(2,1fr); } .release-lens { padding:23px; } .mock-options,.mock-explanation { margin-left:0; } .progress-foot { display:block; } .progress-foot span { display:block; margin-top:4px; } .footer { display:block; } .footer a { display:block; margin-top:8px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }

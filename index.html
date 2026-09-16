@@ -37,6 +37,7 @@
       <button class="tab is-active" data-view="learn" type="button">Learn</button>
       <button class="tab" data-view="cards" type="button">Recall cards</button>
       <button class="tab" data-view="quiz" type="button">Quick check</button>
+      <button class="tab" data-view="mock" type="button">Mock exam</button>
     </nav>
 
     <section class="view is-visible" id="learnView" aria-labelledby="learnTitle">
@@ -44,7 +45,7 @@
       <div class="topic-grid" id="topicGrid"></div>
       <aside class="memory-note"><span class="note-icon">!</span><div><strong>The one-sentence model</strong><p>A pipeline runs jobs; an agent executes a job; a pool decides which agents can be shared; the network and permissions decide whether the work is allowed to happen.</p></div></aside>
       <section class="study-plan" aria-labelledby="studyPlanTitle"><div class="eyebrow">A route that works</div><h2 id="studyPlanTitle">Your 4-pass study plan</h2><div class="plan-grid"><div><b>1. Map</b><span>Read the twenty cores once. Do not try to memorise yet.</span></div><div><b>2. Explain</b><span>Cover the cards and say the answer out loud before flipping.</span></div><div><b>3. Decide</b><span>Do the scenario quiz. Read every explanation, including correct ones.</span></div><div><b>4. Return</b><span>Repeat tomorrow, starting with anything you marked for review.</span></div></div></section>
-      <section class="release-lens" aria-labelledby="releaseLensTitle"><div class="eyebrow">Your working context</div><h2 id="releaseLensTitle">The release-engineering lens</h2><p>This module teaches the machinery. Your job is to use that machinery to move a safe, traceable package of microservices from commit to customer.</p><div class="release-flow"><span>Commit</span><i>→</i><span>Build & test</span><i>→</i><span>Versioned artifacts</span><i>→</i><span>Environments</span><i>→</i><span>Observe & release</span></div><div class="lens-grid"><div><b>Continuous delivery</b><span>Every change is built, tested, and kept deployable. A human or policy may still approve production.</span></div><div><b>Continuous deployment</b><span>Every change that passes the automated safeguards is deployed automatically. This needs strong tests, monitoring, rollback, and small changes.</span></div><div><b>For your platform</b><span>Decide whether services version and deploy independently or travel as a tested release train. Make the dependency contract explicit.</span></div></div></section>
+      <section class="release-lens" aria-labelledby="releaseLensTitle"><div class="eyebrow">Your working context</div><h2 id="releaseLensTitle">The complete CI/CD lens</h2><p>This module teaches the machinery. Your job is to use it to move a safe, traceable package of microservices from code change to customer, with fast feedback throughout.</p><div class="release-flow"><span>Integrate</span><i>→</i><span>Build & test</span><i>→</i><span>Package</span><i>→</i><span>Promote</span><i>→</i><span>Deploy</span><i>→</i><span>Observe</span></div><div class="lens-grid"><div><b>Continuous integration</b><span>Developers integrate small changes frequently. The pipeline builds, tests, scans, and reports quickly so problems are found before release.</span></div><div><b>Continuous delivery</b><span>Every passing change is kept deployable. A human or policy may still approve production, but the package is ready to go.</span></div><div><b>Continuous deployment</b><span>Every change that passes the automated safeguards is deployed automatically. This needs strong tests, monitoring, rollback, and small changes.</span></div></div></section>
     </section>
 
     <section class="view" id="cardsView" aria-labelledby="cardsTitle">
@@ -57,6 +58,13 @@
     <section class="view" id="quizView" aria-labelledby="quizTitle">
       <div class="section-intro"><div><div class="eyebrow">Decision practice</div><h2 id="quizTitle">Make the call</h2></div><p>These are the distinctions worth being able to explain without notes.</p></div>
       <div id="quizArea"></div>
+    </section>
+
+    <section class="view" id="mockView" aria-labelledby="mockTitle">
+      <div class="section-intro"><div><div class="eyebrow">Exam simulation</div><h2 id="mockTitle">Mock exam</h2></div><p>No instant feedback. Submit when you have answered everything, then study the explanations.</p></div>
+      <div class="mock-brief"><div><strong id="mockQuestionCount">33 questions</strong><span>Broad module coverage</span></div><div><strong id="mockPassMark">Pass mark: 80%</strong><span id="mockPassCount">27 correct answers</span></div><div><strong>Exam mode</strong><span>Feedback after submission</span></div></div>
+      <div id="mockArea"></div>
+      <div class="mock-actions"><button class="primary-button" id="submitMockButton" type="button">Submit mock exam</button><button class="secondary-button" id="retakeMockButton" type="button" hidden>Retake with new order</button></div>
     </section>
 
     <footer class="footer"><span>Built for small sessions and imperfect attention.</span><a href="https://learn.microsoft.com/en-us/training/modules/manage-azure-pipeline-agents-pools/" target="_blank" rel="noreferrer">Source: Microsoft Learn</a></footer>
