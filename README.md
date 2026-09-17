@@ -2,5 +2,5 @@
 
 ## Open the pages
 
-- [Study deck](index.html)
-- [Easter egg ](sam.html)
+- [Open the study deck](https://oliverbolger.github.io/)
+- [Open the Shaq page](https://oliverbolger.github.io/sam.html)
