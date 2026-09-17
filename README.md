@@ -3,4 +3,4 @@
 ## Open the pages
 
 - [Study deck](index.html)
-- [Easter Egg ](sam.html)
+- [Easter egg ](sam.html)
