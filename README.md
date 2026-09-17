@@ -2,5 +2,5 @@
 
 ## Open the pages
 
-- [Open the study deck](https://oliverbolger.github.io/)
-- [Open the Shaq page](https://oliverbolger.github.io/sam.html)
+- [Open study deck](https://oliverbolger.github.io/)
+- [Open easter egg](https://oliverbolger.github.io/sam.html)
